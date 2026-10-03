@@ -2,7 +2,7 @@
 
 ## Abstract
 
-A composite floor is proposed in which a deep <mark>trapezoidal</mark> cold-formed steel (CFS) sheet spans in the principal direction, a shallow commercial deck spans across it, and self-drilling screws at the sheet intersections anchor a normal-weight concrete topping. The primary-sheet geometry, topping thickness, deck product and gauge, and screw arrangement were enumerated exhaustively for 54 cases (spans of 4–9 m, three steel grades, three concrete strengths) <mark>under construction-stage</mark>, resistance, neutral-axis, connection and serviceability checks based on AISI S100-24 and ANSI/SDI SD-2022. The reported design is taken from within 5% of the minimum weight W\* using a secondary ranking that favours less primary steel and fewer screws. Feasible designs exist in 52 cases; none exists for S450GD–C20 at 8 and 9 m. Twenty-three reported designs coincide with W\* and the other 29 are at most 1.33% heavier. Total-service deflection governs 22 designs and web shear 12. In the Deck18G cases studied in detail, the share of feasible designs within 5% of W\* falls from 13.9% at 4 m to 0.01% at 9 m, and connection or deflection reserve becomes correspondingly expensive. Against an independently optimized W-section composite floor, 51 of the 52 paired designs are lighter (mean 11.6%) and all are shallower (mean 29.0%). Total steel is lower in 51 cases, although the primary sheet alone is heavier than the W-section from 6 m onward. The proposed designs use on average 97% of the L/240 total-deflection limit, and their strength- and stiffness-to-mass indices exceed those of the reference in only 8 and 11 cases. The gain is a lighter and shallower assembly, not higher structural efficiency per unit mass.
+A composite floor is proposed in which a deep trapezoidal cold-formed steel (CFS) sheet spans in the principal direction, a shallow commercial deck spans across it, and self-drilling screws at the sheet intersections anchor a normal-weight concrete topping. The primary-sheet geometry, topping thickness, deck product and gauge, and screw arrangement were enumerated exhaustively for 54 cases (spans of 4–9 m, three steel grades, three concrete strengths) under construction-stage, resistance, neutral-axis, connection and serviceability checks based on AISI S100-24 and ANSI/SDI SD-2022. The reported design is taken from within 5% of the minimum weight W\* using a secondary ranking that favours less primary steel and fewer screws. Feasible designs exist in 52 cases; none exists for S450GD–C20 at 8 and 9 m. Twenty-three reported designs coincide with W\* and the other 29 are at most 1.33% heavier. Total-service deflection governs 22 designs and web shear 12. In the Deck18G cases studied in detail, the share of feasible designs within 5% of W\* falls from 13.9% at 4 m to 0.01% at 9 m, and connection or deflection reserve becomes correspondingly expensive. Against an independently optimized W-section composite floor, 51 of the 52 paired designs are lighter (mean 11.6%) and all are shallower (mean 29.0%). Total steel is lower in 51 cases, although the primary sheet alone is heavier than the W-section from 6 m onward. The proposed designs use on average 97% of the L/240 total-deflection limit, and their strength- and stiffness-to-mass indices exceed those of the reference in only 8 and 11 cases. The gain is a lighter and shallower assembly, not higher structural efficiency per unit mass.
 
 **Keywords:** Cold-formed steel; Composite floor; Profiled steel sheeting; Discrete optimization; Near-optimal design space; Self-drilling screw connection
 
@@ -90,7 +90,7 @@ Section 2 describes the floor and its design checks, Section 3 the search and se
 
 The floor consists of two orthogonal trapezoidal steel sheets and a concrete topping (Fig. 1). The deeper primary sheet spans in the principal direction. The shallower secondary deck spans between primary-sheet corrugations, serves as permanent formwork and transfers gravity load to the primary sheet at the intersections. Concrete fills the deck troughs and continues above the crests; the topping thickness h<sub>c</sub> is measured from the deck crest. Two orthogonal layers of 8 mm bars control shrinkage and temperature cracking and are ignored in the resistance and rigidity calculations.
 
-![Figure 1](media/image1.png)
+![Figure 1](Figures-600dpi/fig01_system.png)
 
 Concrete topping
 
@@ -104,7 +104,7 @@ Fig. 1. Proposed floor system.
 
 At each intersection, PATTA M6.3/5.5 double-threaded self-drilling screws fasten the two sheets, with the head and upper thread left in the topping (Fig. 2). The detail follows the connector arrangement tested by Li et al. [6], adapted to two orthogonal sheets.
 
-![Figure 2](media/image2.png)
+![Figure 2](Figures-600dpi/fig02_connection.png)
 
 Fig. 2. Screw connection between the primary sheet, the secondary deck and the concrete topping.
 
@@ -186,7 +186,7 @@ Table 2. Discrete design variables of the proposed floor.
 | Secondary-deck gauge        | —                 | Available catalogue gauges | Lightest feasible gauge retained per product                  |
 | Screw rows per intersection | *r*<sub>s</sub>   | Discrete                   | 1, 2 or, where permitted, 4 rows                              |
 
-![Figure 3](media/image3.png)
+![Figure 3](Figures-600dpi/fig03_geometry.png)
 
 Fig. 3. Geometric variables of the proposed floor: (a) section across the primary corrugations; (b) longitudinal section.
 
@@ -211,7 +211,7 @@ The reference search covers the 289 W-sections of the AISC database v16.0 [14] a
 
 Each primary geometry receives a deterministic index before parallel dispatch. Geometric screening precedes the deck checks, which precede the full composite evaluation, so most candidates are rejected cheaply (Fig. 4). Feasible candidates are stored in compact form and ranked centrally, which makes the result independent of the execution order. Both W\* and the reported design are then rebuilt with the full evaluator and accepted only if their ranking keys, deck product, gauge and feasibility are reproduced.
 
-![Figure 4](media/image4.png)
+![Figure 4](Figures-600dpi/fig04_flow.png)
 
 Fig. 4. Enumeration, screening and verification sequence for one case.
 
@@ -225,13 +225,13 @@ Four Deck18G cases are examined in detail because they cover short, intermediate
 
 Feasible designs exist in 52 of the 54 cases; no feasible S450GD–C20 design exists at 8 or 9 m within the bounds of Table 2. The reported weights range from 1.485 to 1.813 kN/m² and the depths from 134.7 to 325.3 mm (Fig. 5). Up to 8 m the weights stay between 1.48 and 1.58 kN/m², with one exception: S450GD–C20 at 7 m, the last feasible span of that combination, weighs 1.813 kN/m² because it needs a 60 mm topping and a 220 mm deep, 1.20 mm primary sheet. At 9 m four designs reach 1.71–1.73 kN/m², and all four use the 26-gauge decks D3 or D4. The hollow markers in Fig. 5 show that W\* lies close to the reported weight in every case.
 
-![Figure 5](media/image5.png)
+![Figure 5](Figures-600dpi/fig05_weight.png)
 
 Fig. 5. Reported structural-component weight (a–c) and total depth (d–f) against span for the three steel cases. Filled markers: reported design; hollow markers: minimum feasible weight W\*.
 
 Profile height and sheet thickness increase with span, from 70–120 mm and 0.45–0.61 mm at 4 m to 210–250 mm and 1.20–1.52 mm at 9 m (Fig. 6). The topping is at its 50 mm lower bound in 51 designs and the top flange at its 50 mm lower bound in 37, so both values are set by the search limits. Deck D1 (0.6C-30/0.6C-35) is used in 21 designs and D2 (0.6C-36) in 27; D3 and D4 appear only at 9 m. Forty-five designs need two screw rows per intersection, seven need one and none needs four (Fig. A1). The topping is the heaviest component of every reported design (Fig. A2).
 
-![Figure 6](media/image6.png)
+![Figure 6](Figures-600dpi/fig06_geometry.png)
 
 Fig. 6. Primary-sheet geometry of the reported designs. Colour steps follow the discrete search grid and are common to the three steel cases; n.f. = no feasible design.
 
@@ -239,7 +239,7 @@ Fig. 6. Primary-sheet geometry of the reported designs. Colour steps follow the 
 
 Fig. 7 gives every utilization ratio of the reported designs. Total-service deflection is the most utilized check in 22 designs, web shear in 12, the steel–concrete force balance in 9, the neutral-axis position in 4, flexure and connection capacity in 2 each, and web slenderness in 1. The governing ratio is at least 0.974 in all designs. Live-load deflection never governs; its ratio lies between 0.35 and 0.47 because, for the present load ratio, the L/240 limit under D + L is the stricter one. Other checks often sit close to the governing one: 99 non-governing ratios are 0.95 or higher, so the governing label alone understates how many limits are active.
 
-![Figure 7](media/image7.png)
+![Figure 7](Figures-600dpi/fig08_utilization.png)
 
 Fig. 7. Utilization ratios of the reported designs. The orange frame marks the largest ratio in each row and dashed white frames other ratios of at least 0.95; hatched rows have no feasible design.
 
@@ -311,7 +311,7 @@ Fig. 14. Weight reduction against depth reduction for the 52 paired cases. Colou
 
 With steel defined as W-section plus deck for the reference and as the two sheets for the proposed floor, the proposed floor uses less steel in 51 of the 52 cases (Fig. 15). The mean reduction is 55.6% at 4 m and 39.4, 21.8, 15.3, 9.4 and 11.4% at 5–9 m. The primary member alone behaves differently (Figs. C5 and C6). The primary sheet is on average 55.3 and 26.7% lighter than the W-section at 4 and 5 m, but 9.2, 16.7, 25.4 and 27.3% heavier at 6–9 m, and it is lighter in only 18 of the 52 cases. Beyond 5 m the steel saving thus comes from replacing the 20- or 22-gauge composite deck with a 26- or 28-gauge secondary deck, not from a lighter flexural member. The component differences (Fig. C3) show that trough concrete gives the largest saving in 48 cases and the deck in the remaining 4; in the 7 m S450GD–C20 case a 0.23 kN/m² topping increase outweighs all other savings.
 
-![Figure 15](media/image15.png)
+![Figure 15](Figures-600dpi/fig11_steel_mean.png)
 
 Fig. 15. Steel weight of the two floors: (a) span-wise means with min–max ranges; (b) mean paired reduction. Conventional steel: W-section and deck; proposed steel: primary and secondary sheets.
 
@@ -327,7 +327,7 @@ Fig. 16. Deflection utilization of the paired designs: (a) live load, L/360; (b)
 
 The proposed floor has the higher strength-to-mass index in 8 of the 52 cases and the higher stiffness-to-mass index in 11 (Fig. 17). The reference, with a W-section acting on an effective width of L/4, provides more resistance and rigidity per unit mass in most cases. These indices compare efficiency and say nothing about safety, since both floors satisfy their own checks. The advantage of the proposed floor is therefore lower weight and depth rather than higher structural efficiency per unit mass.
 
-![Figure 17](media/image17.png)
+![Figure 17](Figures-600dpi/fig15_indices.png)
 
 Fig. 17. Strength-to-mass (a) and stiffness-to-mass (b) indices of the two floors. ϕM<sub>n</sub> and EI<sub>eff</sub> refer to one analysed strip of width b; dashed line: parity.
 
@@ -349,7 +349,7 @@ $\varepsilon_{pl,true}\  = \ ln(1\  + \ \varepsilon_{eng})\  - \ \frac{\sigma_{t
 
 where σ<sub>eng</sub> and ε<sub>eng</sub> are the engineering stress and strain. The first pair is assigned zero plastic strain at yield, and the conversion stops at the pre-necking cut-offs given in Table 1 (Fig. 18). Fracture, damage and element deletion are not modelled.
 
-![Figure 18](media/image18.png)
+![Figure 18](Figures-600dpi/fig16_steel_hardening.png)
 
 Fig. 18. Steel hardening curves: true stress against logarithmic plastic strain, ending at the pre-necking cut-offs.
 
@@ -385,7 +385,7 @@ Table 4. Parameters of the concrete compression curves.
 | C28      | 28                         | 2.195 | 0.001879             | 28.442       | 11.2                                              |
 | C35      | 35                         | 2.811 | 0.001929             | 31.799       | 14.0                                              |
 
-![Figure 19](media/image19.png)
+![Figure 19](Figures-600dpi/fig17_cc_compression.png)
 
 Fig. 19. Carreira–Chu compression curves against total strain.
 
@@ -395,7 +395,7 @@ $d_{c}\  = \ 1\  - \ \frac{\sigma_{c}}{{f'}_{c}}$ (15)
 
 Abaqus derives the plastic strain from the inelastic strain and d<sub>c</sub> [15]; the hardening and damage tables share the same abscissae, and the resulting plastic strains were checked to be non-negative and non-decreasing (Fig. 20).
 
-![Figure 20](media/image20.png)
+![Figure 20](Figures-600dpi/fig18_comp_damage.png)
 
 Fig. 20. Compression damage against inelastic strain.
 
@@ -429,7 +429,7 @@ Table 5. Tensile parameters and Abaqus end points.
 | C28      | 28                         | 2.898                       | 0.1401                     | 0.0484        | 0.2321                                |
 | C35      | 35                         | 3.300                       | 0.1449                     | 0.0439        | 0.2108                                |
 
-![Figure 21](media/image21.png)
+![Figure 21](Figures-600dpi/fig19_tension_softening.png)
 
 Fig. 21. Bilinear tensile softening laws, ending at w<sub>0.01</sub>.
 
@@ -445,7 +445,7 @@ $d_{t} = 0.75 + 0.05\frac{w}{w_{1}},\quad\quad w_{1} < w \leq w_{c}.$ (23)
 
 so that d<sub>t</sub> rises to 0.80 at w<sub>1</sub> (Fig. 22). The input ends at w<sub>0.01</sub> = 4.8w<sub>1</sub>, where σ<sub>t</sub> = 0.01f<sub>ctm</sub> and d<sub>t</sub> = 0.99, within the limits of the implementation [15]. Tension stiffening and damage are defined as functions of displacement (reference length 1.0 mm) on identical abscissae starting at w = 0.
 
-![Figure 22](media/image22.png)
+![Figure 22](Figures-600dpi/fig20_tension_damage.png)
 
 Fig. 22. Tensile damage against crack opening.
 
@@ -463,20 +463,20 @@ Table 6. CDP plasticity parameters (all concrete cases).
 
 ## 5.2 Discretization, interactions and mesh sensitivity
 
-The sheets and the local bearing plates are meshed with S4R shells, the concrete and the loading and support blocks with C3D8R solids, the screws with B31 beams and the bars with T3D2 trusses. Mesh sensitivity was checked on the 4 m model with the four meshes of Table 7, varying the primary-sheet and topping element sizes while keeping 10 mm for the deck and infill concrete, 5 mm for the screws and 20 mm for the bars and loading components. <mark>\[to be updated after the revised Abaqus runs\]</mark>
+The sheets and the local bearing plates are meshed with S4R shells, the concrete and the loading and support blocks with C3D8R solids, the screws with B31 beams and the bars with T3D2 trusses. Mesh sensitivity was checked on the 4 m model with the four meshes of Table 7, varying the primary-sheet and topping element sizes while keeping 10 mm for the deck and infill concrete, 5 mm for the screws and 20 mm for the bars and loading components. \[to be updated after the revised Abaqus runs\]
 
-Table 7. Mesh sensitivity of the 4 m Deck18G–C28 model. <mark>\[to be updated after the revised Abaqus runs\]</mark>
+Table 7. Mesh sensitivity of the 4 m Deck18G–C28 model. \[to be updated after the revised Abaqus runs\]
 
 | **Model** | **Primary sheet (mm)** | **Infill concrete (mm)** | **Concrete topping (mm)** | ***F*<sub>max</sub> (kN)**       | **EI at 0.4*F*<sub>max</sub> (kN·m²)** |
 |-----------|------------------------|--------------------------|---------------------------|----------------------------------|----------------------------------------|
-| Model-1   | 20                     | 10                       | 20                        | <mark>64.326</mark> | <mark>3043.02</mark>      |
-| Model-2   | 10                     | 10                       | 20                        | <mark>64.662</mark> | <mark>3067.53</mark>      |
-| Model-3   | 10                     | 10                       | 10                        | <mark>64.624</mark> | <mark>3049.52</mark>      |
-| Model-4   | 5                      | 10                       | 20                        | <mark>64.451</mark> | <mark>3021.70</mark>      |
+| Model-1   | 20                     | 10                       | 20                        | 64.326 | 3043.02      |
+| Model-2   | 10                     | 10                       | 20                        | 64.662 | 3067.53      |
+| Model-3   | 10                     | 10                       | 10                        | 64.624 | 3049.52      |
+| Model-4   | 5                      | 10                       | 20                        | 64.451 | 3021.70      |
 
-![Figure 23](media/image23.png)
+![Figure 23](Figures-600dpi/fig21_mesh.png)
 
-Fig. 23. Load–midspan displacement of the four meshes of the 4 m model. <mark>\[to be updated after the revised Abaqus runs\]</mark>
+Fig. 23. Load–midspan displacement of the four meshes of the 4 m model. \[to be updated after the revised Abaqus runs\]
 
 General contact is used with hard normal behaviour and a friction coefficient of 0.30. The screw beams are tied to the deck through beam-type connectors, and the sheet-to-sheet attachment uses fastener elements with Cartesian behaviour. Screws and bars are embedded in the concrete, which implies no slip between screw and concrete; this is consistent with the small slips measured by Li et al. [6] but leaves local anchorage behaviour unresolved.
 
@@ -496,7 +496,7 @@ Table 8. Measured [1] and predicted ultimate loads.
 | 2C-P2        | 181.44                     | 180.30                     | 0.994                                   | −0.6          |
 | 2C+C-P2      | 163.01                     | 172.51                     | 1.058                                   | +5.8          |
 
-![Figure 24](media/image24.png)
+![Figure 24](Figures-600dpi/fig22_verification.png)
 
 Fig. 24. Measured [1] and predicted responses of (a) 2C-P1, (b) 2C-P2 and (c) 2C+C-P2.
 
@@ -510,27 +510,27 @@ and the equivalent rigidity from the secant at 0.4F<sub>max</sub> as
 
 ${EI}_{FE}\  = \ \frac{23F_{0.4}L^{3}}{1296\delta_{0.4}}$ (25)
 
-where δ<sub>0.4</sub> is the midspan displacement at F<sub>0.4</sub> = 0.4F<sub>max</sub>. Table 9 compares these values, per metre width, with the nominal analytical resistance (before ϕ) and the transformed-section rigidity of the reported designs. <mark>\[to be updated after the revised Abaqus runs\]</mark>
+where δ<sub>0.4</sub> is the midspan displacement at F<sub>0.4</sub> = 0.4F<sub>max</sub>. Table 9 compares these values, per metre width, with the nominal analytical resistance (before ϕ) and the transformed-section rigidity of the reported designs. \[to be updated after the revised Abaqus runs\]
 
-![Figure 25](media/image25.png)
+![Figure 25](Figures-600dpi/fig23_fe_response.png)
 
-Fig. 25. FE response of the reported Deck18G–C28 designs: (a) 4 m, (b) 6 m, (c) 8 m. <mark>\[to be updated after the revised Abaqus runs\]</mark>
+Fig. 25. FE response of the reported Deck18G–C28 designs: (a) 4 m, (b) 6 m, (c) 8 m. \[to be updated after the revised Abaqus runs\]
 
-Table 9. FE and analytical moment resistance and rigidity per metre width. Analytical values are those of the reported designs; FE values <mark>\[to be updated after the revised Abaqus runs\]</mark>
+Table 9. FE and analytical moment resistance and rigidity per metre width. Analytical values are those of the reported designs; FE values \[to be updated after the revised Abaqus runs\]
 
 | *L (m)* | *M<sub>n,FE</sub> (kN·m/m)* | EI<sub>FE</sub> (kN·m²/m)   | *M<sub>n,Ana</sub> (kN·m/m)* | EI<sub>Ana</sub> (kN·m²/m) | *M<sub>n,FE</sub>/M<sub>n,Ana</sub>* | EI<sub>FE</sub>/EI<sub>Ana</sub> |
 |---------|-----------------------------|-----------------------------|------------------------------|----------------------------|--------------------------------------|----------------------------------|
-| 4       | <mark>–</mark> | <mark>–</mark> | 24.81                        | 1288.8                     | <mark>–</mark>          | <mark>–</mark>      |
-| 6       | <mark>–</mark> | <mark>–</mark> | 61.13                        | 4312.9                     | <mark>–</mark>          | <mark>–</mark>      |
-| 8       | <mark>–</mark> | <mark>–</mark> | 106.71                       | 10478.7                    | <mark>–</mark>          | <mark>–</mark>      |
+| 4       | – | – | 24.81                        | 1288.8                     | –          | –      |
+| 6       | – | – | 61.13                        | 4312.9                     | –          | –      |
+| 8       | – | – | 106.71                       | 10478.7                    | –          | –      |
 
 ## 5.6 Longitudinal connector forces
 
-Fig. 26 shows the longitudinal screw forces along the span. <mark>\[to be updated after the revised Abaqus runs\]</mark> The plotted forces are snapshots at one analysis time; checking the connection would require the peak force in each screw over the full load history, compared with a resistance obtained from tests of this detail.
+Fig. 26 shows the longitudinal screw forces along the span. \[to be updated after the revised Abaqus runs\] The plotted forces are snapshots at one analysis time; checking the connection would require the peak force in each screw over the full load history, compared with a resistance obtained from tests of this detail.
 
-![Figure 26](media/image26.png)
+![Figure 26](Figures-600dpi/fig24_connector.png)
 
-Fig. 26. Longitudinal screw forces in the (a, b) 4 m, (c, d) 6 m and (e, f) 8 m models: pair sums (left) and individual screws (right). <mark>\[to be updated after the revised Abaqus runs\]</mark>
+Fig. 26. Longitudinal screw forces in the (a, b) 4 m, (c, d) 6 m and (e, f) 8 m models: pair sums (left) and individual screws (right). \[to be updated after the revised Abaqus runs\]
 
 # 6. Limitations
 
@@ -560,7 +560,7 @@ Push-out tests of the screw detail, a construction-stage check of the primary sh
 
 ## CRediT authorship contribution statement
 
-<mark>\[To be completed.\]</mark>
+\[To be completed.\]
 
 ## Declaration of competing interest
 
@@ -568,7 +568,7 @@ The authors declare that they have no known competing financial interests or per
 
 ## Data availability
 
-<mark>\[To be completed: repository/DOI of the optimization code, configuration and result files.\]</mark>
+\[To be completed: repository/DOI of the optimization code, configuration and result files.\]
 
 # Appendix A. Reported designs
 
@@ -663,11 +663,11 @@ Fig. B3. Weight against screw density for the designs with g ≤ 5%. Orange: non
 
 Fig. C1. Paired weight (a) and depth (b) of all 54 cases.
 
-![Manuscript figure](media/image33.png)
+![Manuscript figure](Figures-600dpi/fig10_reductions.png)
 
 Fig. C2. Weight reduction (a–c) and depth reduction (d–f) against span by concrete strength.
 
-![Manuscript figure](media/image34.png)
+![Manuscript figure](Figures-600dpi/fig14_waterfall.png)
 
 Fig. C3. Component contributions to the weight difference for selected cases. Negative values are savings of the proposed floor.
 
