@@ -671,7 +671,7 @@ Fig. C2. Weight reduction (a–c) and depth reduction (d–f) against span by co
 
 Fig. C3. Component contributions to the weight difference for selected cases. Negative values are savings of the proposed floor.
 
-![Manuscript figure](media/image35.png)
+![Manuscript figure](Figures-600dpi/fig13_deflection.png)
 
 Fig. C4. Relative change in live-load (a) and total-service (b) deflection; positive values mean larger deflection of the proposed floor.
 
