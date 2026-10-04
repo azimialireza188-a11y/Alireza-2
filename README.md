@@ -102,7 +102,7 @@ Screw
 
 Fig. 1. Proposed floor system.
 
-At each intersection, PATTA M6.3/5.5 double-threaded self-drilling screws fasten the two sheets, with the head and upper thread left in the topping (Fig. 2). The detail follows the connector arrangement tested by Li et al. [6], adapted to two orthogonal sheets.
+At each intersection, double-threaded self-drilling screws fasten the two sheets, with the screw head and upper threaded portion embedded in the concrete topping (Fig. 2). The connection concept is adapted from the arrangement investigated by Li et al. [6], with two orthogonal profiled sheets replacing the sheeting–truss-chord configuration. The commercial screw designation and the resistance data adopted in the calculations are specified in Section 2.3.2.
 
 ![Figure 2](Figures-600dpi/fig02_connection.png)
 
@@ -128,7 +128,7 @@ The concrete has a density of 2500 kg/m³ and a Poisson’s ratio of 0.20. Its m
 
 ### 2.3.1 Loading and design basis
 
-A strip one primary-sheet pitch wide is analysed as simply supported under uniform load. The dead load D comprises the two sheets, the trough concrete and the topping, plus 1.873 kN/m² of flooring and 0.981 kN/m² of partitions; the live load L is 2.0 kN/m². Resistance is checked for 1.2D + 1.6L, and deflections are computed under unfactored D + L (total service) and L (live load). During concreting, the primary sheet is assumed to be shored, whereas the secondary deck spans unshored between primary-sheet corrugations and is therefore the only component subjected to a construction-stage strength-and-deflection verification. In the completed floor only the primary sheet and the concrete above the deck crests enter the transformed section; the deck and the trough concrete contribute weight and geometry only.
+A strip one primary-sheet pitch wide is analysed as simply supported under uniform load. The dead load D comprises the two sheets, the trough concrete and the topping, plus 1.873 kN/m² of flooring and 1.0 kN/m² of partitions; the live load L is 2.0 kN/m². The gravity strength combination adopted in the calculations is 1.2D + 1.6L, following ASCE/SEI 7-22 [20]. Deflections are computed under unfactored D + L (total service) and L (live load). During concreting, the primary sheet is assumed to be shored, whereas the secondary deck spans unshored between primary-sheet corrugations and is therefore the only component subjected to a construction-stage strength-and-deflection verification. In the completed floor only the primary sheet and the concrete above the deck crests enter the transformed section; the deck and the trough concrete contribute weight and geometry only.
 
 ### 2.3.2 Completed composite floor
 
@@ -136,15 +136,21 @@ An elastic transformed-section analysis gives the neutral-axis position, the sec
 
 $M_{n}\  = \ min(F_{y}S_{bot},\ 0.70{f'}_{c}nS_{top})$ (1)
 
-where S<sub>bot</sub> and S<sub>top</sub> are the bottom and top section moduli and n = E<sub>s</sub>/E<sub>0</sub> is the modular ratio; ϕ = 0.90. The 0.70f′<sub>c</sub> bound limits the elastic stress in the topping.
+where S<sub>bot</sub> and S<sub>top</sub> are the elastic section moduli of the composite cross-section transformed to steel, evaluated at the bottom fibre of the primary sheet and the top fibre of the concrete topping, respectively, and n = E<sub>s</sub>/E<sub>0</sub> is the modular ratio; ϕ = 0.90. Both moduli are calculated from the second moment of area and neutral-axis position of the same steel-transformed section. The 0.70f′<sub>c</sub> bound limits the elastic stress in the topping.
 
 The web shear resistance follows Section G2 of AISI S100-24 [9] with k<sub>v</sub> = 5.34 and ϕ<sub>v</sub> = 0.90. Each inclined web is treated as unstiffened, its depth is taken as the full centreline length, and the strip resistance is the sum of the vertical components of the two web resistances. Webs with h/t > 200 are rejected, since Section B4 bounds the range over which these expressions apply.
 
-The resistance of one screw is governed by bearing in the primary sheet (Eq. J4.3.2-1 of [9]),
+The connection model distinguishes bearing of the primary sheet from shear failure of the screw. Li et al. [6] treated the concrete slab and attached profiled sheeting as an equivalent thick connected component and calculated top-chord bearing resistance using N<sub>v</sub> = 2.4t<sub>top</sub>d f<sub>u</sub> from GB/T 50018-2025. The present study adopts the same load-transfer idealization, but uses an AISI-based primary-sheet bearing expression:
 
-$P_{nv} = 2.7t_{1}dF_{u1}$ (2)
+$P_{nv} = 2.7t_{p}dF_{u,p}$ (2)
 
-where t<sub>1</sub>, d and F<sub>u1</sub> are the primary-sheet thickness, the screw diameter (6.3 mm) and the primary-sheet ultimate strength, with ϕ = 0.55. The secondary deck is held by the concrete and moves with the primary sheet, so its share of the longitudinal force is neglected. The design resistance per screw is the smaller of ϕP<sub>nv</sub> and the shank limit of Section J4.3.3, 0.50 × 12.27 = 6.135 kN, where 12.27 kN is the laboratory shear strength published by the manufacturer. The shank limit controls for primary sheets thicker than about 1.55, 1.31 and 1.07 mm in S280GD, Deck18G and S450GD, respectively. The longitudinal force to be transferred over half the span is
+where t<sub>p</sub> is the primary-sheet base-metal thickness, F<sub>u,p</sub> is its ultimate tensile strength, and d is the nominal screw diameter adopted in the bearing calculation. The coefficient 2.7 and the LRFD resistance factor ϕ<sub>b</sub> = 0.55 follow the sheet-bearing provisions of Section J4.3.1 of AISI S100-24 [9]. That section requires consideration of tilting and bearing in the connected sheets, with different expressions depending on their thickness ratio; Eq. (2) represents only the primary-sheet bearing component. Section J4.3.2, including Eq. J4.3.2-1, applies specifically to double-shear steel-to-steel connections and is not used as direct justification for the present concrete-embedded detail. Treating the secondary deck and surrounding concrete as a restrained component, assigning the longitudinal transfer to the primary sheet, and excluding secondary-sheet bearing from the governing resistance are modelling assumptions rather than explicit provisions of AISI S100-24.
+
+For the reported calculations, the commercial screw is designated PATTA M6.3/5.5 and d = 6.3 mm is adopted. The manufacturer's catalogue [21] gives a laboratory shear value of 12.27 kN for the 6.3 mm screw size. Section J4.3.3 of AISI S100-24 specifies an LRFD factor ϕ<sub>s</sub> = 0.50 for shear in screws; the adopted per-screw design-model resistance is therefore R<sub>d</sub> = min(0.55P<sub>nv</sub>, 0.50P<sub>nvs</sub>), with P<sub>nvs</sub> = 12.27 kN and a screw-shear limit of 6.135 kN. Under these adopted inputs, screw shear controls for primary-sheet thicknesses above approximately 1.55, 1.31 and 1.07 mm for S280GD, Deck18G and S450GD, respectively. The catalogue describes its laboratory results as guidance values; it does not establish that the 12.27 kN value applies to the specific M6.3/5.5 screw at the operative shear plane. The diameter engaging the primary sheet and the corresponding screw-shear resistance require product-specific confirmation.
+
+This resistance model does not establish concrete anchorage resistance or connector slip stiffness. Concrete bearing, splitting or breakout, screw bending and any applicable pull-out, pull-over or combined-action limit states must be considered when qualifying the complete connection. AISI Section J4 covers steel-to-steel screw connections; its sheet-bearing and screw-shear expressions alone do not validate a screw–concrete shear connector. The connection-dependent optimization results are conditional on the adopted resistance model, as discussed in Section 6.
+
+The longitudinal force to be transferred over half the span is
 
 $C_{f}\  = \ min(0.85{f'}_{c}A_{c},\ A_{s}F_{y})$ (3)
 
@@ -534,11 +540,11 @@ Fig. 26. Longitudinal screw forces in the (a, b) 4 m, (c, d) 6 m and (e, f) 8 m 
 
 # 6. Limitations
 
-Full interaction is assumed. The connection check combines sheet bearing with a shank limit derived from the manufacturer’s laboratory shear value, which the manufacturer describes as indicative and which is not a characteristic value in the sense of Chapter K of AISI S100-24. Neglecting the share of the secondary deck in the longitudinal force relies on the force-distribution argument of Section J4.3.2. The tests of Li et al. [6] support the connection concept, but the PATTA M6.3/5.5 screw and the orthogonal sheet arrangement differ from the tested detail, so push-out tests are needed to establish its resistance and slip stiffness. The web depth is taken as the full centreline length, which slightly overstates the shear area.
+Full interaction is assumed. The connection check combines sheet bearing with a shank limit derived from the manufacturer’s laboratory shear value, which the manufacturer describes as indicative and which is not a characteristic value in the sense of Chapter K of AISI S100-24. The equivalent thick-component idealization and the omission of secondary-sheet bearing are assumptions transferred from the connection concept of Li et al. [6], rather than consequences of Section J4.3.2, which applies to double-shear steel-to-steel connections. Product-specific confirmation of the diameter at the primary sheet and the screw-shear resistance is also required. The tests of Li et al. [6] support the connection concept, but the PATTA M6.3/5.5 screw and the orthogonal sheet arrangement differ from the tested detail, so push-out tests are needed to establish its resistance and slip stiffness. The web depth is taken as the full centreline length, which slightly overstates the shear area.
 
 The results hold within the discrete domain of Table 2. The topping and the top flange sit at their lower bounds in 51 and 37 reported designs, and the profile height in 6, so wider bounds could change the weights, the geometry and the two infeasible S450GD–C20 cases. The reported design is not the mathematical minimum but lies within 1.33% of it.
 
-The two floors are selected with analogous, not identical, rules, and they differ in construction method (shored beams against unshored sheets). The reference designs use one stud per rib over the web and meet the 38 mm stud extension and 12.7 mm cover only at the limit. Screws and studs are not compared as measures of construction effort.
+The two floors are selected with analogous, not identical, rules, and both assume shoring of the principal spanning member during concreting and unshored construction-stage spanning of the deck between its supports. The reference designs use one stud per rib over the web and meet the 38 mm stud extension and 12.7 mm cover only at the limit. Screws and studs are not compared as measures of construction effort.
 
 Deflections are short-term values from uncracked sections. The construction stage of the primary sheet itself is not checked. The FE verification uses specimens with lightweight concrete and bolted built-up sections, and the FE study covers three of the 52 reported designs under four-point rather than uniform loading.
 
@@ -722,3 +728,8 @@ Fig. C6. Primary-member weight: (a) span-wise means with min–max ranges; (b) m
 [18] fib – International Federation for Structural Concrete. fib Model Code for Concrete Structures (2020), Version 1.2. Lausanne, 2024. ISBN 978-2-88394-176-2.
 
 [19] Hillerborg, A. The theoretical basis of a method to determine the fracture energy GF of concrete. Materials and Structures 18(4) (1985), 291–296. https://doi.org/10.1007/BF02472919.
+
+
+[20] American Society of Civil Engineers. ASCE/SEI 7-22, Minimum design loads and associated criteria for buildings and other structures. ASCE, Reston, VA, 2022. https://www.asce.org/publications-and-news/codes-and-standards/asce-sei-7-22.
+
+[21] PATTA International Limited. Self drilling screws catalogue, CAT ID SDS-202410. Mechanical Data II and screw product specifications. https://www.patta.com/web_files/es/?file_id=3&fs=fs1&func=download&tb=sec_catalogues_download.
